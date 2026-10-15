@@ -1,9 +1,9 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// Served from https://azolotar99.github.io/amberfox-web/ on GitHub Pages.
-// Change `base` to '/' if the site moves to a custom domain.
+// On GitHub Pages the site lives under /<repo>/; the deploy workflow passes that
+// path in via BASE_PATH (from actions/configure-pages). Locally it serves from /.
 export default defineConfig({
-  base: '/amberfox-web/',
+  base: process.env.BASE_PATH ? `${process.env.BASE_PATH.replace(/\/$/, '')}/` : '/',
   plugins: [react()],
 });

@@ -23,5 +23,6 @@ npm run preview  # serve the production build
 Pushes to `main` build and deploy via `.github/workflows/deploy.yml`. In the repo's
 **Settings → Pages**, set **Source** to **GitHub Actions** (one-time).
 
-The site is served from `https://azolotar99.github.io/amberfox-web/`, so `base` in
-`vite.config.ts` is `/amberfox-web/`. Set it to `/` when moving to a custom domain.
+The site is served from `https://azolotar99.github.io/Amberfox-Web/`. The workflow reads
+that path from the Pages settings and passes it to Vite as `BASE_PATH`, so it keeps working
+if the repo is renamed or a custom domain is added.
