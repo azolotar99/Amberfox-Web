@@ -371,7 +371,7 @@ section { padding: 96px 48px; }
 .products-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2px;
+  gap: 6px;
 }
 
 .product-card {
