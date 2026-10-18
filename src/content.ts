@@ -8,7 +8,7 @@ export const navLinks = [
   { label: 'Products', href: '#/products' },
   { label: 'About', href: '#about' },
   { label: 'Automation', href: '#automation' },
-  { label: 'Gallery', href: '#gallery' },
+  { label: 'Gallery', href: '#/gallery' },
 ];
 
 export interface ProductPhoto {
