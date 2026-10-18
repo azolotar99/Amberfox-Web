@@ -11,13 +11,13 @@ export default function Products() {
         </div>
         <div className="products-header-right">
           <p>From classic plantation shutters to motorised roller blinds, we supply and install quality window furnishings tailored to your space and budget.</p>
-          <a href="#" className="products-link">View all products →</a>
+          <a href="#/products" className="products-link">View all products →</a>
         </div>
       </div>
 
       <div className="products-grid">
         {products.map((product) => (
-          <div className="product-card" key={product.name}>
+          <a className="product-card" href={`#/products/${product.slug}`} key={product.slug}>
             <ResponsivePicture
               name={product.image}
               widths={[480, 900]}
@@ -30,7 +30,7 @@ export default function Products() {
               <div className="product-card-name">{product.name}</div>
               <div className="product-card-arrow">→</div>
             </div>
-          </div>
+          </a>
         ))}
       </div>
     </section>
