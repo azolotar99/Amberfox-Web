@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 
-export type Route = { page: 'home' } | { page: 'products'; slug?: string };
+export type Route = { page: 'home' } | { page: 'products' | 'gallery'; slug?: string };
 
-/** `#/products` and `#/products/<slug>` open the Products page; any other hash is the homepage. */
+/** `#/products[/<slug>]` and `#/gallery[/<slug>]` open those pages; any other hash is the homepage. */
 const parse = (hash: string): Route => {
-  const match = hash.match(/^#\/products(?:\/([\w-]+))?\/?$/);
-  return match ? { page: 'products', slug: match[1] } : { page: 'home' };
+  const match = hash.match(/^#\/(products|gallery)(?:\/([\w-]+))?\/?$/);
+  return match ? { page: match[1] as 'products' | 'gallery', slug: match[2] } : { page: 'home' };
 };
 
 /** Hash-based routing, so deep links work on GitHub Pages without a 404 fallback. */
