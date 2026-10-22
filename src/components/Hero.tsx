@@ -21,7 +21,7 @@ export default function Hero() {
           Family owned and operated. We bring quality window furnishing solutions to homes and businesses across Sydney — with a free measure and quote.
         </p>
         <div className="hero-actions">
-          <a href="#contact" className="btn-primary">Get a Free Quote</a>
+          <a href="#/contact" className="btn-primary">Get a Free Quote</a>
           <a href="#products" className="btn-ghost">
             Our Products <span className="arrow">→</span>
           </a>

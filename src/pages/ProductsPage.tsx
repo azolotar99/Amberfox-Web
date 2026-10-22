@@ -83,7 +83,7 @@ export default function ProductsPage({ activeSlug }: Props) {
                     <li key={benefit}><CheckIcon />{benefit}</li>
                   ))}
                 </ul>
-                <a href="#contact" className="btn-primary">Book a free measure &amp; quote</a>
+                <a href="#/contact" className="btn-primary">Book a free measure &amp; quote</a>
               </div>
               <button type="button" className="product-detail-lead" onClick={() => setViewing({ product, index: 0 })}>
                 <ResponsivePicture
