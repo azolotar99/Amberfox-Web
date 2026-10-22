@@ -26,7 +26,7 @@ export default function Nav() {
           </li>
         ))}
         <li>
-          <a href="#contact" className="nav-cta">Free Quote</a>
+          <a href="#/contact" className="nav-cta">Free Quote</a>
         </li>
       </ul>
     </nav>

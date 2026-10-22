@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
 
-export type Route = { page: 'home' } | { page: 'products' | 'gallery'; slug?: string };
+export type Route = { page: 'home' | 'contact' } | { page: 'products' | 'gallery'; slug?: string };
 
-/** `#/products[/<slug>]` and `#/gallery[/<slug>]` open those pages; any other hash is the homepage. */
+/** `#/products[/<slug>]`, `#/gallery[/<slug>]` and `#/contact` open those pages; any other hash is the homepage. */
 const parse = (hash: string): Route => {
+  if (/^#\/contact\/?$/.test(hash)) return { page: 'contact' };
   const match = hash.match(/^#\/(products|gallery)(?:\/([\w-]+))?\/?$/);
   return match ? { page: match[1] as 'products' | 'gallery', slug: match[2] } : { page: 'home' };
 };

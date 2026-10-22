@@ -10,7 +10,7 @@ export default function CtaBand() {
         <p style={{ color: 'rgba(255,255,255,0.55)', marginTop: 16, fontSize: 15, maxWidth: 400 }}>
           By appointment — we come to you. Covering Sydney's Eastern Suburbs and surrounds.
         </p>
-        <a href={contact.email.href} className="btn-primary" style={{ marginTop: 32, display: 'inline-block' }}>Send us an enquiry</a>
+        <a href="#/contact" className="btn-primary" style={{ marginTop: 32, display: 'inline-block' }}>Send us an enquiry</a>
       </div>
       <div className="cta-band-right">
         <a href={contact.office.href} className="contact-info">

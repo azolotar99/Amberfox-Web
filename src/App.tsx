@@ -12,6 +12,7 @@ import CtaBand from './components/CtaBand';
 import Footer from './components/Footer';
 import ProductsPage from './pages/ProductsPage';
 import GalleryPage from './pages/GalleryPage';
+import ContactPage from './pages/ContactPage';
 import { productBySlug } from './content';
 import { useRoute, type Route } from './route';
 
@@ -22,6 +23,7 @@ const scrollTarget = (route: Route) => {
   if (route.page === 'products') return route.slug ? document.getElementById(route.slug) : null;
   // Gallery filters swap the grid in place, so stay where the visitor is.
   if (route.page === 'gallery') return undefined;
+  if (route.page === 'contact') return null;
   const id = decodeURIComponent(window.location.hash.slice(1));
   return id ? document.getElementById(id) : null;
 };
@@ -43,7 +45,9 @@ export default function App() {
       ? `${product ? product.name : 'Our Products'} | Amberfox Blinds & Shutters`
       : route.page === 'gallery'
         ? 'Installation Gallery | Amberfox Blinds & Shutters'
-        : SITE_TITLE;
+        : route.page === 'contact'
+          ? 'Contact Us | Amberfox Blinds & Shutters'
+          : SITE_TITLE;
   }, [route]);
 
   return (
@@ -53,6 +57,8 @@ export default function App() {
         <ProductsPage activeSlug={route.slug} />
       ) : route.page === 'gallery' ? (
         <GalleryPage activeSlug={route.slug} />
+      ) : route.page === 'contact' ? (
+        <ContactPage />
       ) : (
         <>
           <Hero />
@@ -65,7 +71,7 @@ export default function App() {
           <Testimonials />
         </>
       )}
-      <CtaBand />
+      {route.page !== 'contact' && <CtaBand />}
       <Footer />
     </>
   );

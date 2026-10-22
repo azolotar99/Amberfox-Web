@@ -1,7 +1,21 @@
 export const contact = {
   office: { label: '(02) 9130 7009', href: 'tel:0291307009' },
-  mobile: { label: '0407 667 881', href: 'tel:0407667881' },
+  mobile: { label: '0407 667 881', href: 'tel:+61407667881' },
   email: { label: 'info@amberfoxblinds.com.au', href: 'mailto:info@amberfoxblinds.com.au' },
+  showroom: { suburb: 'Bellevue Hill', note: 'Visits by appointment only' },
+};
+
+export const contactPage = {
+  intro: [
+    'Our goal is to create a customer experience that is simple, honest and professional from beginning to end.',
+    'We will work with you to find a solution that is best suited to your needs, environment and budget.',
+  ],
+  formHeading: 'Message us',
+  formIntro: 'For new business and general enquiries, talk to us today.',
+  /** Formspree emails submissions to info@ and checks reCAPTCHA with the secret key held in its dashboard. */
+  formEndpoint: 'https://formspree.io/f/mwlvgyle',
+  /** Public reCAPTCHA v3 site key. The secret key never goes in this repo. */
+  recaptchaSiteKey: '6LdLAPYtAAAAAJQYALOrFTsQDknqhpZQudXVUW-U',
 };
 
 export const navLinks = [
