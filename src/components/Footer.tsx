@@ -14,7 +14,7 @@ export default function Footer() {
           </li>
         ))}
         <li><a href="#">Safety</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#/contact">Contact</a></li>
       </ul>
       <div className="footer-copy">© {new Date().getFullYear()} Amberfox Blinds & Shutters. Your local specialists since 1997.</div>
     </footer>
