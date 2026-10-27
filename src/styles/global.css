@@ -1516,13 +1516,13 @@ a.contact-card:hover { border-color: var(--orange); }
 
 .automation-video-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 340px));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 32px;
   margin-top: 40px;
 }
 
 .automation-video-frame {
-  aspect-ratio: 9 / 16;
+  aspect-ratio: 16 / 9;
   background: var(--black);
   overflow: hidden;
 }
@@ -1650,6 +1650,7 @@ a.contact-card:hover { border-color: var(--orange); }
   .contact-page-body { grid-template-columns: minmax(0, 1fr); gap: 48px; }
   .automation-page-hero { padding: 56px 24px 48px; }
   .automation-somfy { grid-template-columns: minmax(0, 1fr); gap: 40px; }
+  .automation-video-grid { grid-template-columns: minmax(0, 1fr); }
   .automation-somfy-aside { border-left: none; border-top: 1px solid rgba(255,255,255,0.3); padding: 32px 0 0; }
 }
 
@@ -1665,8 +1666,6 @@ a.contact-card:hover { border-color: var(--orange); }
   .contact-cards, .contact-form-row { grid-template-columns: minmax(0, 1fr); }
   .contact-form-wrap { padding: 28px 20px; }
   .automation-page-hero .section-heading { font-size: clamp(34px, 10vw, 44px); }
-  .automation-video-grid { grid-template-columns: minmax(0, 1fr); justify-items: center; }
-  .automation-video-grid figure { width: min(100%, 340px); }
   .automation-options { grid-template-columns: minmax(0, 1fr); }
   .automation-option { padding: 28px 20px; }
 }
