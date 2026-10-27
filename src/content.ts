@@ -21,7 +21,7 @@ export const contactPage = {
 export const navLinks = [
   { label: 'Products', href: '#/products' },
   { label: 'About', href: '#about' },
-  { label: 'Automation', href: '#automation' },
+  { label: 'Automation', href: '#/automation' },
   { label: 'Gallery', href: '#/gallery' },
 ];
 
@@ -330,3 +330,92 @@ export const testimonials: Testimonial[] = [
     location: 'Rose Bay, NSW',
   },
 ];
+
+export interface AutomationOption {
+  name: string;
+  tagline?: string;
+  text: string[];
+  points?: string[];
+}
+
+export interface AutomationVideo {
+  /** Google Drive file id; the file must be shared with "anyone with the link" for the embed to play. */
+  driveId: string;
+  title: string;
+}
+
+/** Copy from Amberfox's "Automation - Motorised Blinds" document. */
+export const automationPage = {
+  heading: 'Motorised Blinds & Curtains',
+  tagline: 'Smart Comfort. Effortless Living.',
+  intro: 'Discover the convenience of motorised blinds and curtains with automation solutions designed to suit your home, lifestyle and budget. From simple remote-controlled operation to advanced smart-home integration, Amberfox Blinds offers modern solutions for effortless window covering control.',
+  videos: [
+    { driveId: '10XCl9no0ffwtQGyY57q8bjiEP3cAyaDL', title: 'Motorised blinds in action' },
+    { driveId: '1VFoxw7CMauj7YiQODlQAyJOFOP5TbDH7', title: 'Motorised blinds opening and closing' },
+  ] as AutomationVideo[],
+  motors: [
+    {
+      name: 'Battery-Operated Motors',
+      text: ['Enjoy the convenience of motorised blinds and curtains without the need for hardwired electrical connections. Battery-operated motors are ideal for existing homes, renovations and installations where wiring is impractical.'],
+      points: [
+        'No fixed electrical wiring required.',
+        'Convenient remote-controlled operation.',
+        'Rechargeable battery options available, depending on the motor.',
+        'Minimal disruption during installation.',
+      ],
+    },
+    {
+      name: 'Hardwired Motors',
+      text: ['A reliable, permanent power solution for new homes, renovations and larger installations. Hardwired motors provide convenient operation and can be integrated with compatible automation systems.'],
+      points: [
+        'Permanent electrical power supply.',
+        'Suitable for individual blinds or multiple window coverings.',
+        'Ideal for large windows and whole-home projects.',
+        'Compatible with selected smart-home systems.',
+      ],
+    },
+  ] as AutomationOption[],
+  somfy: {
+    name: 'Somfy',
+    tagline: 'Intelligent motorisation for modern living.',
+    text: [
+      'Somfy offers motorisation solutions for blinds and curtains, combining convenience, performance and smart-home possibilities.',
+      'Depending on the motor and control system selected, features can include remote control, grouped operation, automated schedules and integration with compatible smart-home platforms.',
+    ],
+    link: { label: 'Somfy.com.au', href: 'https://www.somfy.com.au' },
+  },
+  brands: [
+    {
+      name: 'Acmeda',
+      tagline: 'Practical motorisation for contemporary homes.',
+      text: [
+        'Acmeda provides motorisation solutions for selected internal and external window coverings, with options designed to suit different applications and installation requirements.',
+        'Depending on the product selected, features may include battery or hardwired power, remote control and integration with compatible automation systems.',
+      ],
+    },
+  ] as AutomationOption[],
+  brandsNote: 'Our team can help you choose the right motorisation brand and solution for your window coverings.',
+  smartHome: [
+    {
+      name: 'Somfy TaHoma',
+      tagline: 'Control your window coverings from one place.',
+      text: [
+        'Somfy TaHoma is a smart-home control platform for compatible devices. Depending on your system configuration, it allows you to manage your blinds and curtains through a smartphone app, create automated schedules and control multiple window coverings together.',
+        'Enjoy the convenience of blinds opening in the morning and curtains closing in the evening, all according to your preferred routine.',
+      ],
+    },
+    {
+      name: 'Zigbee Automation',
+      tagline: 'Flexible control for connected homes.',
+      text: [
+        'Zigbee is a wireless communication technology used by selected smart-home devices and motorised window coverings.',
+        'With compatible motors, controllers and a suitable hub, you may be able to control your blinds and curtains through a smartphone app, create schedules and integrate them with supported smart-home systems.',
+        'Compatibility depends on the motor, gateway and chosen smart-home platform.',
+      ],
+    },
+  ] as AutomationOption[],
+  closing: {
+    heading: 'Smart Living, Made Simple',
+    text: 'Whether you prefer a simple remote control or a fully integrated smart-home solution, Amberfox Blinds can help you find the right automation system for your home.',
+  },
+};

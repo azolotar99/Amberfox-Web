@@ -1488,6 +1488,136 @@ a.contact-card:hover { border-color: var(--orange); }
 
 .btn-outline:hover { border-color: var(--orange); color: var(--orange); }
 
+/* AUTOMATION PAGE */
+.automation-page { padding-top: 72px; }
+
+.automation-page-hero {
+  background: var(--black);
+  padding: 88px 48px 72px;
+}
+
+.automation-page-hero .section-heading { color: #fff; max-width: 820px; }
+
+.automation-page-hero p {
+  color: rgba(255,255,255,0.65);
+  font-size: 17px;
+  line-height: 1.75;
+  margin-top: 16px;
+  max-width: 640px;
+}
+
+.automation-page-hero .automation-page-tagline {
+  color: var(--orange);
+  font-size: 20px;
+  margin-top: 24px;
+}
+
+.automation-videos { background: var(--off-white); }
+
+.automation-video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 340px));
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.automation-video-frame {
+  aspect-ratio: 9 / 16;
+  background: var(--black);
+  overflow: hidden;
+}
+
+.automation-video-frame iframe { display: block; width: 100%; height: 100%; border: 0; }
+
+.automation-video-grid figcaption { margin-top: 12px; font-size: 14px; }
+
+.automation-video-grid figcaption a { color: var(--orange); font-weight: 600; }
+
+.automation-block.is-tinted { background: var(--off-white); }
+
+.automation-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2px;
+  margin-top: 40px;
+}
+
+.automation-block.is-tinted .automation-options { margin-top: 0; }
+
+.automation-option {
+  background: var(--off-white);
+  padding: 36px;
+  border-top: 3px solid var(--orange);
+}
+
+.automation-block.is-tinted .automation-option { background: #fff; }
+
+.automation-option h3 {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+
+.automation-option p {
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.75;
+  margin-top: 10px;
+  max-width: 620px;
+}
+
+.automation-option .automation-option-tagline { color: var(--orange); font-size: 17px; font-weight: 500; margin-top: 0; }
+
+.automation-option .product-benefits { grid-template-columns: 1fr; margin: 24px 0 0; }
+
+.automation-note { margin-top: 32px; font-size: 17px; max-width: 620px; }
+
+.automation-somfy {
+  background: var(--orange);
+  color: #fff;
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  gap: 64px;
+  align-items: center;
+}
+
+.automation-somfy-text p {
+  color: rgba(255,255,255,0.85);
+  font-size: 16px;
+  line-height: 1.75;
+  margin-top: 12px;
+  max-width: 600px;
+}
+
+.automation-somfy-text .automation-somfy-tagline { color: #fff; font-size: 20px; margin-top: 0; }
+
+.automation-somfy-aside {
+  border-left: 1px solid rgba(255,255,255,0.3);
+  padding-left: 48px;
+}
+
+.automation-somfy-aside p {
+  color: rgba(255,255,255,0.85);
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+.automation-somfy-aside .btn-white { display: inline-block; }
+
+.automation-closing { text-align: center; }
+
+.automation-closing p {
+  color: var(--text-muted);
+  font-size: 17px;
+  line-height: 1.75;
+  margin: 20px auto 0;
+  max-width: 620px;
+}
+
 /* Responsive */
 @media (max-width: 900px) {
   nav { padding: 0 24px; }
@@ -1518,6 +1648,9 @@ a.contact-card:hover { border-color: var(--orange); }
   .product-gallery { grid-template-columns: 1fr 1fr; }
   .contact-page-hero { padding: 56px 24px 48px; }
   .contact-page-body { grid-template-columns: minmax(0, 1fr); gap: 48px; }
+  .automation-page-hero { padding: 56px 24px 48px; }
+  .automation-somfy { grid-template-columns: minmax(0, 1fr); gap: 40px; }
+  .automation-somfy-aside { border-left: none; border-top: 1px solid rgba(255,255,255,0.3); padding: 32px 0 0; }
 }
 
 /* Inter is wider than a condensed face, so phone headings need a little more room */
@@ -1531,4 +1664,9 @@ a.contact-card:hover { border-color: var(--orange); }
   .gallery-strip-header { padding: 0 24px; flex-wrap: wrap; gap: 16px; }
   .contact-cards, .contact-form-row { grid-template-columns: minmax(0, 1fr); }
   .contact-form-wrap { padding: 28px 20px; }
+  .automation-page-hero .section-heading { font-size: clamp(34px, 10vw, 44px); }
+  .automation-video-grid { grid-template-columns: minmax(0, 1fr); justify-items: center; }
+  .automation-video-grid figure { width: min(100%, 340px); }
+  .automation-options { grid-template-columns: minmax(0, 1fr); }
+  .automation-option { padding: 28px 20px; }
 }

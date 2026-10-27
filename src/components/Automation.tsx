@@ -15,7 +15,7 @@ export default function Automation() {
         <div className="automation-label">Smart home ready</div>
         <h2 className="automation-heading">Motorised<br />& Automated</h2>
         <p>Effortless operation of your blinds, shutters or awnings via remote control, timer or sun sensors. Eliminates chains and cords for a cleaner, safer look.</p>
-        <a href="#" className="btn-white">Learn about automation</a>
+        <a href="#/automation" className="btn-white">Learn about automation</a>
       </div>
       <div className="automation-features">
         {features.map((feature) => (
