@@ -1,5 +1,6 @@
 import { automationPage as page, type AutomationOption } from '../content';
 import { CheckIcon } from '../components/Icons';
+import ResponsivePicture from '../components/ResponsivePicture';
 
 const driveUrl = (id: string, view: 'preview' | 'view') => `https://drive.google.com/file/d/${id}/${view}`;
 
@@ -7,10 +8,23 @@ export default function AutomationPage() {
   return (
     <main className="automation-page">
       <header className="automation-page-hero">
-        <div className="section-label">Smart home ready</div>
-        <h1 className="section-heading">{page.heading}</h1>
-        <p className="automation-page-tagline">{page.tagline}</p>
-        <p>{page.intro}</p>
+        <div className="automation-page-hero-text">
+          <div className="section-label">Smart home ready</div>
+          <h1 className="section-heading">{page.heading}</h1>
+          <p className="automation-page-tagline">{page.tagline}</p>
+          <p>{page.intro}</p>
+        </div>
+        <div className="automation-page-hero-image">
+          <ResponsivePicture
+            name="somfy-awning"
+            widths={[480, 780]}
+            sizes="(max-width: 900px) 100vw, 50vw"
+            width={780}
+            height={520}
+            alt="A Somfy motorised folding-arm awning extended over a window"
+            priority
+          />
+        </div>
       </header>
 
       <section className="automation-videos">
