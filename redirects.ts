@@ -15,7 +15,7 @@ const oldPaths: Record<string, string> = {
   'products/venetian-blinds': '#/products/venetian-blinds',
   'products/awnings': '#/products/awnings',
   'products/curtains': '#/products/curtains',
-  automation: '#automation',
+  automation: '#/automation',
   // No safety page yet, so this lands on the homepage.
   safety: '',
   gallery: '#/gallery',

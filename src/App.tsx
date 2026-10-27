@@ -13,6 +13,7 @@ import Footer from './components/Footer';
 import ProductsPage from './pages/ProductsPage';
 import GalleryPage from './pages/GalleryPage';
 import ContactPage from './pages/ContactPage';
+import AutomationPage from './pages/AutomationPage';
 import { productBySlug } from './content';
 import { useRoute, type Route } from './route';
 
@@ -23,7 +24,7 @@ const scrollTarget = (route: Route) => {
   if (route.page === 'products') return route.slug ? document.getElementById(route.slug) : null;
   // Gallery filters swap the grid in place, so stay where the visitor is.
   if (route.page === 'gallery') return undefined;
-  if (route.page === 'contact') return null;
+  if (route.page === 'contact' || route.page === 'automation') return null;
   const id = decodeURIComponent(window.location.hash.slice(1));
   return id ? document.getElementById(id) : null;
 };
@@ -47,7 +48,9 @@ export default function App() {
         ? 'Installation Gallery | Amberfox Blinds & Shutters'
         : route.page === 'contact'
           ? 'Contact Us | Amberfox Blinds & Shutters'
-          : SITE_TITLE;
+          : route.page === 'automation'
+            ? 'Motorised Blinds & Automation | Amberfox Blinds & Shutters'
+            : SITE_TITLE;
   }, [route]);
 
   return (
@@ -59,6 +62,8 @@ export default function App() {
         <GalleryPage activeSlug={route.slug} />
       ) : route.page === 'contact' ? (
         <ContactPage />
+      ) : route.page === 'automation' ? (
+        <AutomationPage />
       ) : (
         <>
           <Hero />
