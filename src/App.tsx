@@ -8,12 +8,14 @@ import Process from './components/Process';
 import Automation from './components/Automation';
 import GalleryStrip from './components/GalleryStrip';
 import Testimonials from './components/Testimonials';
+import SuppliersBand from './components/SuppliersBand';
 import CtaBand from './components/CtaBand';
 import Footer from './components/Footer';
 import ProductsPage from './pages/ProductsPage';
 import GalleryPage from './pages/GalleryPage';
 import ContactPage from './pages/ContactPage';
 import AutomationPage from './pages/AutomationPage';
+import SuppliersPage from './pages/SuppliersPage';
 import { productBySlug } from './content';
 import { useRoute, type Route } from './route';
 
@@ -24,7 +26,7 @@ const scrollTarget = (route: Route) => {
   if (route.page === 'products') return route.slug ? document.getElementById(route.slug) : null;
   // Gallery filters swap the grid in place, so stay where the visitor is.
   if (route.page === 'gallery') return undefined;
-  if (route.page === 'contact' || route.page === 'automation') return null;
+  if (route.page === 'contact' || route.page === 'automation' || route.page === 'suppliers') return null;
   const id = decodeURIComponent(window.location.hash.slice(1));
   return id ? document.getElementById(id) : null;
 };
@@ -50,7 +52,9 @@ export default function App() {
           ? 'Contact Us | Amberfox Blinds & Shutters'
           : route.page === 'automation'
             ? 'Motorised Blinds & Automation | Amberfox Blinds & Shutters'
-            : SITE_TITLE;
+            : route.page === 'suppliers'
+              ? 'Our Suppliers | Amberfox Blinds & Shutters'
+              : SITE_TITLE;
   }, [route]);
 
   return (
@@ -64,6 +68,8 @@ export default function App() {
         <ContactPage />
       ) : route.page === 'automation' ? (
         <AutomationPage />
+      ) : route.page === 'suppliers' ? (
+        <SuppliersPage />
       ) : (
         <>
           <Hero />
@@ -77,6 +83,7 @@ export default function App() {
         </>
       )}
       {route.page !== 'contact' && <CtaBand />}
+      {route.page === 'home' && <SuppliersBand />}
       <Footer />
     </>
   );

@@ -419,3 +419,74 @@ export const automationPage = {
     text: 'Whether you prefer a simple remote control or a fully integrated smart-home solution, Amberfox Blinds can help you find the right automation system for your home.',
   },
 };
+
+export interface Supplier {
+  slug: string;
+  name: string;
+  description: string;
+  /** Hero photo basename in /public/images/suppliers; expects `-600` and `-1200` .jpg/.webp variants. */
+  image: string;
+  imageAlt: string;
+  link: { label: string; href: string };
+}
+
+/** Fabric suppliers from Alex's "Suppliers.docx"; descriptions condensed from each supplier's own website. */
+export const suppliersPage = {
+  heading: 'Our Suppliers',
+  intro: 'We carefully select the brands we work with, so every blind, curtain and shutter we install is made from fabrics and components we trust.',
+  featured: {
+    slug: 'verosol',
+    name: 'Verosol',
+    heading: 'Proud to Offer Verosol',
+    text: [
+      'At Amberfox Blinds, we carefully select the brands we work with, and Verosol is one we truly believe in. Renowned for its exceptional quality, innovative solar-control fabrics and timeless design, Verosol offers window furnishing solutions that combine beauty with performance.',
+      'We are proud to offer Verosol because we believe our customers deserve quality products from brands we trust.',
+      'Discover the Verosol collection and explore the possibilities for your home.',
+    ],
+    image: 'verosol',
+    imageAlt: 'Verosol 45mm cellular blinds on a sliding door',
+    link: { label: 'Verosol.com.au', href: 'https://verosol.com.au' },
+  },
+  others: [
+    {
+      slug: 'james-dunlop',
+      name: 'James Dunlop Textiles',
+      description: 'Founded in 1907 in Dunedin, New Zealand, James Dunlop has built a deep-seated knowledge of interior textiles, offering premium indoor and outdoor fabrics for drapery and upholstery, plus wallcoverings.',
+      image: 'james-dunlop',
+      imageAlt: 'Sheer James Dunlop curtains in a living room',
+      link: { label: 'jamesdunloptextiles.com', href: 'https://www.jamesdunloptextiles.com' },
+    },
+    {
+      slug: 'zepel',
+      name: 'Zepel Fabrics',
+      description: 'In the wholesale fabric market since 1978, Zepel focuses on quality, high-performance "life-friendly" textiles: fabrics that are durable, easy clean, modern and epitomise everyday luxury.',
+      image: 'zepel',
+      imageAlt: 'Zepel fabrics in a styled interior',
+      link: { label: 'zepelfabrics.com', href: 'https://www.zepelfabrics.com' },
+    },
+    {
+      slug: 'nettex',
+      name: 'Nettex',
+      description: 'Suppliers of quality window furnishings since 1984, with a passion for designing the most fashionable fabrics for the Australian and New Zealand markets, engineered to high specifications of quality.',
+      image: 'nettex',
+      imageAlt: 'A living room styled with Nettex Ghana fabric',
+      link: { label: 'nettex.com.au', href: 'https://www.nettex.com.au' },
+    },
+    {
+      slug: 'warwick',
+      name: 'Warwick Fabrics',
+      description: 'A family-owned textile wholesaler based in Melbourne, dedicated to quality upholstery, drapery and furnishing fabrics. We design. You create. Together, we inspire.',
+      image: 'warwick',
+      imageAlt: 'A room styled with the Warwick Rusk collection',
+      link: { label: 'warwickfabrics.com.au', href: 'https://www.warwick.com.au' },
+    },
+    {
+      slug: 'ricky-richards',
+      name: 'Ricky Richards',
+      description: 'Supplying fabrics for shade, marine, print and upholstery, Ricky Richards partners with global leaders such as Phifer, Sioen and Citel to bring the best of the world to Australia.',
+      image: 'ricky-richards',
+      imageAlt: 'Ricky Richards shade fabric over an outdoor area',
+      link: { label: 'rickyrichards.com.au', href: 'https://www.rickyrichards.com.au' },
+    },
+  ] as Supplier[],
+};

@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react';
 
-export type Route = { page: 'home' | 'contact' | 'automation' } | { page: 'products' | 'gallery'; slug?: string };
+export type Route = { page: 'home' | 'contact' | 'automation' | 'suppliers' } | { page: 'products' | 'gallery'; slug?: string };
 
-/** `#/products[/<slug>]`, `#/gallery[/<slug>]`, `#/contact` and `#/automation` open those pages; any other hash is the homepage. */
+/** `#/products[/<slug>]`, `#/gallery[/<slug>]`, `#/contact`, `#/automation` and `#/suppliers` open those pages; any other hash is the homepage. */
 const parse = (hash: string): Route => {
   // Bare #contact is the old homepage anchor; send it to the page too.
   if (/^#\/?contact\/?$/.test(hash)) return { page: 'contact' };
   if (/^#\/automation\/?$/.test(hash)) return { page: 'automation' };
+  if (/^#\/suppliers\/?$/.test(hash)) return { page: 'suppliers' };
   const match = hash.match(/^#\/(products|gallery)(?:\/([\w-]+))?\/?$/);
   return match ? { page: match[1] as 'products' | 'gallery', slug: match[2] } : { page: 'home' };
 };
