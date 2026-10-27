@@ -13,6 +13,7 @@ export default function Footer() {
             <a href={link.href}>{link.label}</a>
           </li>
         ))}
+        <li><a href="#/suppliers">Suppliers</a></li>
         <li><a href="#">Safety</a></li>
         <li><a href="#/contact">Contact</a></li>
       </ul>
