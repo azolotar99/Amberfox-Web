@@ -26,12 +26,6 @@ const marks: Record<string, ReactNode> = {
       Warwick
     </span>
   ),
-  'ricky-richards': (
-    <span className="mark-ricky-richards">
-      <svg viewBox="0 0 24 26" width="26" height="28"><path d="M12 1l10.4 6v12L12 25 1.6 19V7Z" fill="currentColor" /><text x="12" y="18" textAnchor="middle" fontSize="13" fontWeight="800" fill="#fff" fontFamily="Inter, Arial, sans-serif">R</text></svg>
-      ricky
-    </span>
-  ),
 };
 
 export default function SupplierMark({ slug }: { slug: string }) {
