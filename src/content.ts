@@ -480,13 +480,5 @@ export const suppliersPage = {
       imageAlt: 'A room styled with the Warwick Rusk collection',
       link: { label: 'warwickfabrics.com.au', href: 'https://www.warwick.com.au' },
     },
-    {
-      slug: 'ricky-richards',
-      name: 'Ricky Richards',
-      description: 'Supplying fabrics for shade, marine, print and upholstery, Ricky Richards partners with global leaders such as Phifer, Sioen and Citel to bring the best of the world to Australia.',
-      image: 'ricky-richards',
-      imageAlt: 'Ricky Richards shade fabric over an outdoor area',
-      link: { label: 'rickyrichards.com.au', href: 'https://www.rickyrichards.com.au' },
-    },
   ] as Supplier[],
 };

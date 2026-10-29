@@ -1656,14 +1656,12 @@ a.contact-card:hover { border-color: var(--orange); }
 
 .mark-warwick { font-weight: 600; font-size: 18px; letter-spacing: 0.24em; text-transform: uppercase; }
 
-.mark-ricky-richards { font-weight: 700; font-size: 30px; letter-spacing: -0.02em; }
-
 .suppliers-band { text-align: center; border-top: 1px solid var(--warm-gray); }
 
 .suppliers-band-marks {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 2px;
   margin: 48px auto;
   max-width: 1280px;
@@ -1731,7 +1729,7 @@ a.contact-card:hover { border-color: var(--orange); }
 
 .suppliers-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 32px;
   margin-top: 40px;
 }
@@ -1759,7 +1757,8 @@ a.contact-card:hover { border-color: var(--orange); }
 .supplier-card a:hover { text-decoration: underline; }
 
 @media (max-width: 1100px) {
-  .suppliers-band-marks { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .suppliers-band-marks { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .suppliers-band-marks li:last-child:nth-child(odd) { grid-column: 1 / -1; }
   .suppliers-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
